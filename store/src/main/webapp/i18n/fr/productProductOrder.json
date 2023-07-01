@@ -1,0 +1,33 @@
+{
+  "storeApp": {
+    "productProductOrder": {
+      "home": {
+        "title": "ProductOrders",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Product Order",
+        "createOrEditLabel": "Créer ou éditer un Product Order",
+        "notFound": "Aucun Product Order trouvé"
+      },
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Product Order {{ id }} ?"
+      },
+      "detail": {
+        "title": "Product Order"
+      },
+      "id": "ID",
+      "placedDate": "Placed Date",
+      "status": "Status",
+      "code": "Code",
+      "invoiceId": "Invoice Id",
+      "customer": "Customer",
+      "orderItem": "Order Item"
+    }
+  },
+  "productApp": {
+    "productProductOrder": {
+      "created": "Un nouveau Product Order a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Product Order avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Product Order avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "applications": ["store", "invoice"],
+  "changelogDate": "20230628142444",
+  "clientRootFolder": "invoice",
+  "databaseType": "sql",
+  "entityTableName": "invoice",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "details",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "InvoiceStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PAID,ISSUED,CANCELLED"
+    },
+    {
+      "fieldName": "paymentMethod",
+      "fieldType": "PaymentMethod",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "CREDIT_CARD,CASH_ON_DELIVERY,PAYPAL"
+    },
+    {
+      "fieldName": "paymentDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentAmount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "javadoc": "Entities for Invoice microservice",
+  "microserviceName": "invoice",
+  "name": "Invoice",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "shipment",
+      "otherEntityRelationshipName": "invoice",
+      "relationshipName": "shipment",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

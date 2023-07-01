@@ -1,0 +1,2 @@
+org.springframework.test.context.ContextCustomizerFactory=\
+com.okta.demo.product.config.SqlTestContainersSpringContextCustomizerFactory

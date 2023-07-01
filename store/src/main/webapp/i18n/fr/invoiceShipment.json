@@ -1,0 +1,31 @@
+{
+  "storeApp": {
+    "invoiceShipment": {
+      "home": {
+        "title": "Shipments",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Shipment",
+        "createOrEditLabel": "Créer ou éditer un Shipment",
+        "notFound": "Aucun Shipment trouvé"
+      },
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Shipment {{ id }} ?"
+      },
+      "detail": {
+        "title": "Shipment"
+      },
+      "id": "ID",
+      "trackingCode": "Tracking Code",
+      "date": "Date",
+      "details": "Details",
+      "invoice": "Invoice"
+    }
+  },
+  "invoiceApp": {
+    "invoiceShipment": {
+      "created": "Un nouveau Shipment a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Shipment avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Shipment avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

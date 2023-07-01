@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: application-config
+  namespace: jhipster
+#common configuration shared between all applications
+data:
+  application.yml: |-
+    configserver:
+      name: Consul
+      status: Connected to Consul running in Kubernetes
+    jhipster:
+      security:
+        authentication:
+          jwt:
+            base64-secret: NTY5NTUyYzUzZDFlNjBkNjMzNDNkZWQzNDk0ZjAwOTQzZTU2ZTMyOTgxYTI3ZTZjYWViNjEzMmM3MGQ5MDNlY2YwYjY2MDc0ZDNlZWM1ZTY3ZDllNDE4NDlhY2M2YmViY2E3Mg==
+        oauth2:
+          audience:
+            - https://dev-example.us.auth0.com/api/v2/
+    spring:
+      security:
+        oauth2:
+          client:
+            provider:
+              oidc:
+                issuer-uri: https://dev-example.us.auth0.com/
+            registration:
+              oidc:
+                client-id: <client-id>
+                client-secret: <client-secret>
+  # app specific configuration

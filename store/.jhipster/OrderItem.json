@@ -1,0 +1,51 @@
+{
+  "applications": ["store", "product"],
+  "changelogDate": "20230628143044",
+  "clientRootFolder": "product",
+  "databaseType": "sql",
+  "entityTableName": "order_item",
+  "fields": [
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "totalPrice",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "OrderItemStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "AVAILABLE,OUT_OF_STOCK,BACK_ORDER"
+    }
+  ],
+  "microserviceName": "product",
+  "name": "OrderItem",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "product",
+      "relationshipName": "product",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "code",
+      "otherEntityName": "productOrder",
+      "otherEntityRelationshipName": "orderItem",
+      "relationshipName": "order",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["store", "invoice", "product"],
+    "clusteredDbApps": [],
+    "deploymentType": "kubernetes",
+    "directoryPath": "../",
+    "dockerPushCommand": "docker push",
+    "dockerRepositoryName": "deepu105",
+    "ingressDomain": "",
+    "istio": false,
+    "jhipsterVersion": "8.0.0-beta.1",
+    "jwtSecretKey": "NTY5NTUyYzUzZDFlNjBkNjMzNDNkZWQzNDk0ZjAwOTQzZTU2ZTMyOTgxYTI3ZTZjYWViNjEzMmM3MGQ5MDNlY2YwYjY2MDc0ZDNlZWM1ZTY3ZDllNDE4NDlhY2M2YmViY2E3Mg==",
+    "kubernetesNamespace": "jhipster",
+    "kubernetesServiceType": "LoadBalancer",
+    "kubernetesStorageClassName": "",
+    "kubernetesUseDynamicStorage": false,
+    "monitoring": "no",
+    "serviceDiscoveryType": "consul"
+  }
+}

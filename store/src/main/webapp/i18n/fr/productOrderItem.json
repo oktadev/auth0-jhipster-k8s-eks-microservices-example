@@ -1,0 +1,32 @@
+{
+  "storeApp": {
+    "productOrderItem": {
+      "home": {
+        "title": "OrderItems",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Order Item",
+        "createOrEditLabel": "Créer ou éditer un Order Item",
+        "notFound": "Aucun Order Item trouvé"
+      },
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Order Item {{ id }} ?"
+      },
+      "detail": {
+        "title": "Order Item"
+      },
+      "id": "ID",
+      "quantity": "Quantity",
+      "totalPrice": "Total Price",
+      "status": "Status",
+      "product": "Product",
+      "order": "Order"
+    }
+  },
+  "productApp": {
+    "productOrderItem": {
+      "created": "Un nouveau Order Item a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Order Item avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Order Item avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

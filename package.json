@@ -1,0 +1,35 @@
+{
+  "workspaces": {
+    "packages": [
+      "store",
+      "product",
+      "invoice"
+    ]
+  },
+  "scripts": {
+    "backend:build-cache": "concurrently npm:backend:build-cache:store npm:backend:build-cache:product npm:backend:build-cache:invoice",
+    "backend:build-cache:invoice": "npm run backend:build-cache --workspace invoice --if-present",
+    "backend:build-cache:product": "npm run backend:build-cache --workspace product --if-present",
+    "backend:build-cache:store": "npm run backend:build-cache --workspace store --if-present",
+    "ci:backend:test": "npm run ci:backend:test --workspaces --if-present",
+    "ci:e2e:package": "npm run ci:docker:build --workspaces --if-present && npm run java:docker --workspaces --if-present",
+    "ci:e2e:run": "npm run e2e:headless --workspaces --if-present",
+    "ci:frontend:test": "npm run ci:frontend:test --workspaces --if-present",
+    "java:docker": "concurrently npm:java:docker:store npm:java:docker:product npm:java:docker:invoice",
+    "java:docker:arm64": "concurrently npm:java:docker:arm64:store npm:java:docker:arm64:product npm:java:docker:arm64:invoice",
+    "java:docker:arm64:invoice": "npm run java:docker:arm64 --workspace invoice --if-present",
+    "java:docker:arm64:product": "npm run java:docker:arm64 --workspace product --if-present",
+    "java:docker:arm64:store": "npm run java:docker:arm64 --workspace store --if-present",
+    "java:docker:invoice": "npm run java:docker --workspace invoice --if-present",
+    "java:docker:product": "npm run java:docker --workspace product --if-present",
+    "java:docker:store": "npm run java:docker --workspace store --if-present",
+    "watch": "concurrently npm:watch:store npm:watch:product npm:watch:invoice",
+    "watch:invoice": "npm run watch --workspace invoice --if-present",
+    "watch:product": "npm run watch --workspace product --if-present",
+    "watch:store": "npm run watch --workspace store --if-present",
+    "webapp:test": "npm run webapp:test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "8.1.0"
+  }
+}

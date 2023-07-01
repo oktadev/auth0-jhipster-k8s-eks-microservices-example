@@ -1,0 +1,31 @@
+{
+  "applications": ["store", "product"],
+  "changelogDate": "20230628142844",
+  "clientRootFolder": "product",
+  "databaseType": "sql",
+  "entityTableName": "product_category",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "product",
+  "name": "ProductCategory",
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "productCategory",
+      "relationshipName": "product",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

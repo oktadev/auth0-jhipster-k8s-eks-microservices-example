@@ -1,6 +1,6 @@
 # Cloud Native Java Microservices on Amazon EKS with Spring Boot, Kubernetes, Terraform, Auth0 and JHipster
 
-This is an example application accompanying the blog post [Deploy Secure Java Microservices on Amazon EKS Using Terraform and Kubernetes]() on the [Auth0 developer blog](https://auth0.com/blog/developers/).
+This is an example application accompanying the blog post [Deploy Secure Spring Boot Microservices on Amazon EKS Using Terraform and Kubernetes](https://auth0.com/blog/terraform-eks-java-microservices/) on the [Auth0 developer blog](https://auth0.com/blog/developers/).
 
 **Prerequisites**
 
